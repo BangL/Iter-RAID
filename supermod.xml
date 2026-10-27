@@ -6,12 +6,18 @@
     priority="40"
     color="0.52 1 0">
     <hooks>
+        <post hook_id="lib/managers/mission/elementnavlink"
+              script_path="lua/elementnavlink.lua" />
+        <post hook_id="lib/managers/mission/elementspecialobjective"
+              script_path="lua/elementspecialobjective.lua" />
         <post hook_id="lib/managers/navigationmanager"
               script_path="lua/navigationmanager.lua" />
         <post hook_id="lib/managers/group_ai_states/groupaistatebase"
               script_path="lua/groupaistatebase.lua" />
         <post hook_id="lib/units/enemies/cop/copbrain"
               script_path="lua/copbrain.lua" />
+        <post hook_id="lib/units/enemies/cop/actions/lower_body/copactionwalk"
+              script_path="lua/copactionwalk.lua" />
         <post hook_id="lib/units/enemies/cop/logics/coplogictravel"
               script_path="lua/coplogictravel.lua" />
     </hooks>
