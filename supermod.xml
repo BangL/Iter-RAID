@@ -1,4 +1,4 @@
-<mod name="Iter"
+<mod name="Iter RAID"
     description="Improved navigation for all AIs"
     author="TdlQ, BangL"
     version="0.1"
@@ -6,8 +6,8 @@
     priority="40"
     color="0.52 1 0">
     <updates>
-        <update identifier="iter">
-            <host meta="https://raw.githubusercontent.com/BangL/raid-mods-meta/main/iter.json"/>
+        <update identifier="iter-raid">
+            <host meta="https://raw.githubusercontent.com/BangL/raid-mods-meta/main/iter-raid.json"/>
         </update>
     </updates>
     <hooks>
