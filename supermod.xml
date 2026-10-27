@@ -4,6 +4,7 @@
     version="0.1"
     min_sblt_version="2.0.0"
     priority="40"
+    image="tdlq.dds"
     color="0.52 1 0">
     <updates>
         <update identifier="iter-raid">
