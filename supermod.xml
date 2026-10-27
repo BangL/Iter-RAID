@@ -1,0 +1,18 @@
+<mod name="Iter"
+    description="Improved navigation for all AIs"
+    author="TdlQ, BangL"
+    version="0.1"
+    min_sblt_version="2.0.0"
+    priority="40"
+    color="0.52 1 0">
+    <hooks>
+        <post hook_id="lib/managers/navigationmanager"
+              script_path="lua/navigationmanager.lua" />
+        <post hook_id="lib/managers/group_ai_states/groupaistatebase"
+              script_path="lua/groupaistatebase.lua" />
+        <post hook_id="lib/units/enemies/cop/copbrain"
+              script_path="lua/copbrain.lua" />
+        <post hook_id="lib/units/enemies/cop/logics/coplogictravel"
+              script_path="lua/coplogictravel.lua" />
+    </hooks>
+</mod>
