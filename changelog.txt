@@ -1,3 +1,14 @@
+Version 0.1 (RAID port of Iter r205 by TdlQ, ported by BangL):
+- improved NPC pathing for RAID: coarse paths between nav segments are streamlined (doors are chosen so that paths have less detours, nav link congestion is taken into account), applies to enemies and team AI, host only
+- RAID keeps rooms, doors and visibility groups in the engine only, they are rebuilt per nav world (also for streamed and appended worlds) while the nav data is loaded
+- nav links: NPCs queue at nav links (ladders, jumps) and switch to a sibling link when one is busy, instead of piling up
+- shortcut check of walking NPCs also looks for obstacles and drops on the way
+- fixed crashes in the game's handling of nav segment neighbours (missing segments or neighbours, leftovers of unloaded worlds)
+- removed everything specific to PAYDAY 2: level nav data patches, map_change options, civilian and team AI path optimization, options menu (there is nothing left to switch, disable the mod in the BLT menu instead)
+- not ported: appending next steps to a running walk action (RAID has its own path ahead for team AI), nav link end position rebuild (RAID has few, regular animations, nothing to fix)
+
+Everything below is the changelog of the PAYDAY 2 version.
+
 Revision 205:
 - restored the full streamlining of "Improve NPC pathing" for the U247+ navigation: rooms, room doors and visibility groups are rebuilt in their old format from the level's navigation data before the game hands it to the engine, so the original streamline code is used again [courtesy of BangL]
 - restored nav segment proxies and choke points (flood of the rooms of each nav segment), used to place the steps of coarse paths [courtesy of BangL]
