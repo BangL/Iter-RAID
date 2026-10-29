@@ -239,12 +239,16 @@ function CopActionWalk:itr_update_wait_for_navlink_availability(t)
 	else
 		self._last_upd_t = t
 		self:itr_update_navlink_queue_data(navlink_element)
-		if self._ext_anim.move then
+		-- the idle redirect needs a few frames to clear the move flag: replaying it every frame restarted the
+		-- pose blend of a waiting enemy over and over, a crouched one kept popping between crouch and stand
+		if self._ext_anim.move and (not self.itr_stop_walk_t or t > self.itr_stop_walk_t) then
 			self:_stop_walk()
+			self.itr_stop_walk_t = t + 0.5
 		end
 		return
 	end
 
+	self.itr_stop_walk_t = nil
 	self:_set_updator(self._start_run and '_upd_start_anim_first_frame' or nil)
 	self._common_data.ext_brain:rem_pos_rsrv('stand')
 	self.itr_wait_for_navlink = nil

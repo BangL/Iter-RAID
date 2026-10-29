@@ -1,3 +1,6 @@
+Version 0.2:
+- enemies waiting at a busy nav link no longer replay the idle animation every frame (crouched ones switched between crouch and stand)
+
 Version 0.1 (RAID port of Iter r205 by TdlQ, ported by BangL):
 - improved NPC pathing for RAID: coarse paths between nav segments are streamlined (doors are chosen so that paths have less detours, nav link congestion is taken into account), applies to enemies and team AI, host only
 - RAID keeps rooms, doors and visibility groups in the engine only, they are rebuilt per nav world (also for streamed and appended worlds) while the nav data is loaded
