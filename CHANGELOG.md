@@ -1,3 +1,4 @@
+
 Version 0.2:
 - enemies waiting at a busy nav link no longer replay the idle animation every frame (crouched ones switched between crouch and stand)
 

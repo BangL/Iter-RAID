@@ -8,7 +8,7 @@
     color="0.52 1 0">
     <updates>
         <update identifier="iter-raid">
-            <host meta="https://raw.githubusercontent.com/BangL/raid-mods-meta/main/iter-raid.json"/>
+            <host meta="https://raw.githubusercontent.com/BangL/raid-mods-meta/main/iter-raid.json" patchnotes="https://github.com/BangL/Iter-RAID/blob/main/CHANGELOG.md"/>
         </update>
     </updates>
     <hooks>
